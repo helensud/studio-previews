@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>QHR Qatar — concept preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080f18;
+  --surface:#0e1927;
+  --surface2:#152233;
+  --ink:#d8e8f4;
+  --muted:#5a7890;
+  --accent:#0ea5e9;
+  --accent-soft:color-mix(in srgb,#0ea5e9 12%,transparent);
+  --accent-ink:#080f18;
+  --display:'Syne',system-ui,sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+}
+*{margin:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-family:var(--display);font-size:1.4rem;font-weight:800;letter-spacing:-.02em}
+.logo span{color:var(--accent)}
+.header-actions{display:flex;gap:10px;align-items:center}
+.btn-outline{border:1px solid color-mix(in srgb,var(--ink) 20%,transparent);color:var(--ink);padding:9px 18px;border-radius:8px;text-decoration:none;font-size:.85rem;font-weight:500}
+.btn-fill{background:var(--accent);color:var(--accent-ink);padding:9px 18px;border-radius:8px;text-decoration:none;font-size:.85rem;font-weight:600}
+
+/* Hero */
+.hero{padding:9vh 0 10vh;text-align:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);border-radius:100px;padding:7px 16px;margin-bottom:24px;font-size:.78rem;font-weight:600;color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.kicker::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent)}
+h1{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.06;font-weight:800;margin-bottom:20px;letter-spacing:-.03em}
+h1 span{color:var(--accent)}
+.sub{color:var(--muted);font-size:1.05rem;max-width:50ch;margin:0 auto 32px;line-height:1.7}
+.cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+.cta-primary{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:600;padding:15px 30px;border-radius:10px;text-decoration:none;font-size:.95rem;font-family:var(--display)}
+.cta-secondary-btn{display:inline-block;border:1px solid color-mix(in srgb,var(--ink) 20%,transparent);color:var(--ink);font-weight:500;padding:15px 30px;border-radius:10px;text-decoration:none;font-size:.95rem}
+.stats-row{display:flex;gap:0;justify-content:center;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent);border-radius:14px;overflow:hidden;max-width:560px;margin:0 auto}
+.stat{flex:1;padding:20px 16px;text-align:center;border-right:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.stat:last-child{border-right:none}
+.stat .num{font-family:var(--display);font-size:1.7rem;font-weight:800;color:var(--accent);display:block;letter-spacing:-.02em}
+.stat .label{font-size:.73rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:2px;display:block}
+
+/* Services */
+.services{padding:60px 0 72px;border-top:1px solid color-mix(in srgb,var(--ink) 7%,transparent)}
+.section-label{color:var(--accent);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:12px;text-align:center}
+h2{font-family:var(--display);font-size:1.9rem;font-weight:800;margin-bottom:32px;text-align:center;letter-spacing:-.02em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border-radius:14px;padding:28px 24px;border:1px solid color-mix(in srgb,var(--ink) 6%,transparent);text-align:left}
+.card-tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:6px;margin-bottom:14px}
+.card h3{font-family:var(--display);font-size:.98rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:.88rem;line-height:1.55}
+
+/* Strip */
+.strip{margin:0 0 72px;background:var(--surface2);border-radius:18px;padding:44px 40px;display:flex;justify-content:space-between;align-items:center;gap:28px;border:1px solid color-mix(in srgb,var(--accent) 14%,transparent)}
+.strip h2{font-family:var(--display);font-size:1.55rem;font-weight:800;max-width:28ch;margin-bottom:8px;letter-spacing:-.02em;text-align:left}
+.strip .trust{color:var(--muted);font-size:.87rem}
+
+footer{padding:18px 0 36px;color:color-mix(in srgb,var(--muted) 55%,transparent);font-size:.76rem}
+
+@media(max-width:760px){
+  .grid{grid-template-columns:1fr}
+  .strip{flex-direction:column;align-items:flex-start}
+  .header-actions .btn-outline{display:none}
+  .stats-row{flex-direction:column;max-width:100%}
+  .stat{border-right:none;border-bottom:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+  .stat:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">QHR <span>Qatar</span></div>
+    <div class="header-actions">
+      <a class="btn-outline" href="#">Find Jobs</a>
+      <a class="btn-fill" href="#">Post a Job</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="kicker">Qatar's Recruitment Platform</div>
+    <h1>3,200+ Professionals.<br>Ready to Join <span>Your Team.</span></h1>
+    <p class="sub">Qatar's dedicated job platform connecting employers with screened, Qatar-based professionals. Post a job in 5 minutes. Reach candidates you won't find on LinkedIn.</p>
+    <div class="cta-group">
+      <a class="cta-primary" href="#">Post a Job — From QAR 150</a>
+      <a class="cta-secondary-btn" href="#">Browse Candidates</a>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><span class="num">3,200+</span><span class="label">Registered Candidates</span></div>
+      <div class="stat"><span class="num">185+</span><span class="label">Companies Hiring</span></div>
+      <div class="stat"><span class="num">94+</span><span class="label">Live Vacancies</span></div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="section-label">Who we serve</div>
+    <h2>One platform, two sides of the market</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="card-tag">For Employers</span>
+        <h3>Post & Find in Days</h3>
+        <p>Reach 3,200+ screened candidates in Qatar. Accounting, engineering, hospitality, IT — every sector. No recruiter fees.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">For Job Seekers</span>
+        <h3>Qatar-Specific Roles</h3>
+        <p>Jobs posted by verified Qatar employers with real salaries. Search by sector, apply in minutes, get callbacks fast.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">For Agencies</span>
+        <h3>Agency Toolkit</h3>
+        <p>Dedicated recruiter accounts to post on behalf of clients, manage multiple pipelines, and track placements in one place.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" id="contact">
+    <div>
+      <h2>Ready to hire? Post your first job today.</h2>
+      <div class="trust">QHR Qatar · info@qhr.qa · Qatar-based team · Active moderation</div>
+    </div>
+    <a class="cta-primary" href="#">Post a Job</a>
+  </section>
+
+  <footer>Concept preview prepared by Elena Agency for QHR Qatar — not a live site.</footer>
+</div>
+</body>
+</html>
