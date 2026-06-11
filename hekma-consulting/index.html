@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>HEKMA Consulting — concept preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#120d07;
+  --surface:#1e1609;
+  --surface2:#2a1e0e;
+  --ink:#f0e8d8;
+  --muted:#9e8866;
+  --accent:#d4650a;
+  --accent-light:#f07b2a;
+  --accent-ink:#120d07;
+  --display:'Fraunces',Georgia,serif;
+  --body:'DM Sans',system-ui,sans-serif;
+}
+*{margin:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-family:var(--display);font-size:1.3rem;font-weight:700;letter-spacing:.01em}
+.logo span{color:var(--accent)}
+.tel{color:var(--muted);text-decoration:none;font-size:.88rem;transition:color .2s}
+
+/* Hero */
+.hero{padding:9vh 0 10vh;display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+.kicker{display:inline-flex;gap:8px;align-items:center;color:var(--accent);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:18px}
+.kicker::before{content:'';display:block;width:24px;height:2px;background:var(--accent)}
+h1{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.3rem);line-height:1.1;font-weight:700;margin-bottom:18px}
+h1 em{color:var(--accent-light);font-style:normal}
+.sub{color:var(--muted);font-size:1rem;max-width:46ch;margin-bottom:30px;line-height:1.7}
+.cta{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:600;padding:16px 30px;border-radius:10px;text-decoration:none;font-size:.95rem}
+.cta-note{display:block;margin-top:10px;color:var(--muted);font-size:.83rem}
+.hero-visual{aspect-ratio:4/5;border-radius:20px;
+  background:radial-gradient(ellipse 110% 70% at 20% 90%,color-mix(in srgb,var(--accent) 35%,transparent),transparent 55%),
+  radial-gradient(ellipse 70% 60% at 80% 15%,color-mix(in srgb,var(--accent-light) 15%,transparent),transparent 55%),
+  linear-gradient(160deg,var(--surface2),var(--bg));
+  border:1px solid color-mix(in srgb,var(--accent) 18%,transparent);
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:30px}
+.client-logos{display:flex;flex-direction:column;gap:10px}
+.client-logo-item{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-top:1px solid color-mix(in srgb,var(--ink) 10%,transparent);padding-top:10px}
+.client-logo-item strong{color:var(--ink);display:block;font-size:.8rem}
+
+/* Services */
+.services{padding:60px 0 72px;border-top:1px solid color-mix(in srgb,var(--ink) 7%,transparent)}
+.section-kicker{color:var(--accent);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+h2{font-family:var(--display);font-size:1.9rem;font-weight:700;margin-bottom:32px;max-width:34ch}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border-radius:14px;padding:28px 24px;border:1px solid color-mix(in srgb,var(--ink) 6%,transparent)}
+.card .num{font-family:var(--display);font-size:2.2rem;color:var(--accent);font-weight:700;line-height:1;margin-bottom:14px}
+.card h3{font-size:.98rem;font-weight:600;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.88rem;line-height:1.55}
+
+/* Strip */
+.strip{margin:0 0 72px;background:var(--surface2);border-radius:18px;padding:44px 40px;display:flex;justify-content:space-between;align-items:center;gap:28px;border:1px solid color-mix(in srgb,var(--accent) 18%,transparent)}
+.strip h2{font-family:var(--display);font-size:1.55rem;font-weight:700;max-width:28ch;margin-bottom:8px}
+.strip .trust{color:var(--muted);font-size:.87rem}
+.strip .cta{white-space:nowrap;flex-shrink:0}
+
+footer{padding:18px 0 36px;color:color-mix(in srgb,var(--muted) 55%,transparent);font-size:.76rem}
+
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr;padding:5vh 0}
+  .hero-visual{aspect-ratio:3/2;order:-1}
+  .grid{grid-template-columns:1fr}
+  .strip{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">HEKMA <span>Consulting</span></div>
+    <a class="tel" href="tel:+97444023938">+974 4402 3938</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="kicker">Business Consulting · Corniche Road, Doha</div>
+      <h1>Your Restaurant is Losing Money.<br><em>We Fix That.</em></h1>
+      <p class="sub">Turnarounds, franchise launches, and retail transformations — HEKMA has 40+ years of combined experience and a track record with Qatar Development Bank clients and international franchise brands.</p>
+      <a class="cta" href="https://wa.me/97444023938">Book a Discovery Call</a>
+      <span class="cta-note">Eng. Hesham Mourad · Managing Partner · Reply within 24 hrs</span>
+    </div>
+    <div class="hero-visual">
+      <div class="client-logos">
+        <div class="client-logo-item"><strong>Qatar Development Bank</strong>Preferred consulting partner</div>
+        <div class="client-logo-item"><strong>Real Madrid Official Stores</strong>Franchise advisory, Gulf region</div>
+        <div class="client-logo-item"><strong>Gulf Franchise Group</strong>Strategic partner</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="section-kicker">What we do</div>
+    <h2>From struggling operation to profitable business</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>Restaurant Turnaround</h3>
+        <p>Business plan, menu engineering, brand repositioning, and operational fix — for restaurants haemorrhaging cash or stuck at break-even.</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3>Franchise Development</h3>
+        <p>Make your brand ready to franchise: training systems, franchise brokerage, marketing, and territory strategy across the Gulf.</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3>Retail & Strategic Planning</h3>
+        <p>Market entry, ERP alignment, and strategic roadmaps for retail businesses seeking capital, growth, or a structured exit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" id="contact">
+    <div>
+      <h2>Let's talk about your business this week.</h2>
+      <div class="trust">HEKMA Consulting · 40+ years experience · QDB & franchise clients</div>
+    </div>
+    <a class="cta" href="https://wa.me/97444023938">WhatsApp Hesham</a>
+  </section>
+
+  <footer>Concept preview prepared by Elena Agency for HEKMA Consulting — not a live site.</footer>
+</div>
+</body>
+</html>
