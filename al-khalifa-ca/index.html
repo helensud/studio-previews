@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>A.Al Khalifa & Partners — concept preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1117;
+  --surface:#161d27;
+  --surface2:#1d2633;
+  --ink:#e6ecf2;
+  --muted:#7a8fa0;
+  --accent:#c9952a;
+  --accent-soft:color-mix(in srgb,#c9952a 14%,transparent);
+  --accent-ink:#0d1117;
+  --display:'Libre Baskerville',Georgia,serif;
+  --body:'Inter',system-ui,sans-serif;
+}
+*{margin:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.logo{font-family:var(--display);font-size:1.15rem;line-height:1.2}
+.logo em{display:block;font-style:normal;color:var(--muted);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.since{color:var(--muted);font-size:.82rem}
+.since strong{color:var(--accent)}
+
+/* Hero */
+.hero{padding:9vh 0 10vh;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+.kicker{color:var(--accent);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+h1{font-family:var(--display);font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.15;font-weight:700;margin-bottom:18px}
+.sub{color:var(--muted);font-size:1rem;max-width:46ch;margin-bottom:28px;line-height:1.7}
+.trust-row{display:flex;gap:22px;margin-bottom:28px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:.82rem;color:var(--muted)}
+.trust-item::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.trust-item strong{color:var(--ink)}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);font-weight:600;padding:15px 28px;border-radius:9px;text-decoration:none;font-size:.93rem}
+.cta svg{width:17px;height:17px;fill:currentColor}
+.cta-note{display:block;margin-top:10px;color:var(--muted);font-size:.83rem}
+.hero-visual{aspect-ratio:1;border-radius:20px;
+  background:radial-gradient(ellipse 100% 60% at 50% 100%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 60%),
+  linear-gradient(160deg,var(--surface2),var(--surface));
+  border:1px solid color-mix(in srgb,var(--ink) 6%,transparent);
+  padding:36px;display:flex;align-items:center;justify-content:center}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:2px;width:100%}
+.metric{background:var(--bg);padding:20px 18px;border-radius:6px}
+.metric .num{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--accent);display:block;line-height:1;margin-bottom:4px}
+.metric .label{font-size:.73rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+
+/* Services */
+.services{padding:60px 0 72px;border-top:1px solid color-mix(in srgb,var(--ink) 7%,transparent)}
+h2{font-family:var(--display);font-size:1.75rem;font-weight:700;margin-bottom:32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border-radius:14px;padding:28px 24px;border:1px solid color-mix(in srgb,var(--ink) 6%,transparent)}
+.card h3{font-size:.97rem;font-weight:600;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.88rem;line-height:1.55}
+
+/* Strip */
+.strip{margin:0 0 72px;background:var(--surface2);border-radius:18px;padding:44px 40px;display:flex;justify-content:space-between;align-items:center;gap:28px;border:1px solid color-mix(in srgb,var(--accent) 14%,transparent)}
+.strip h2{font-family:var(--display);font-size:1.5rem;font-weight:700;max-width:28ch;margin-bottom:8px}
+.strip .trust{color:var(--muted);font-size:.86rem}
+.strip .cta{white-space:nowrap;flex-shrink:0}
+
+footer{padding:18px 0 36px;color:color-mix(in srgb,var(--muted) 55%,transparent);font-size:.76rem}
+
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr;padding:5vh 0}
+  .hero-visual{aspect-ratio:3/2;order:-1}
+  .grid{grid-template-columns:1fr}
+  .strip{flex-direction:column;align-items:flex-start}
+  .trust-row{gap:14px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">A.Al Khalifa &amp; Partners<em>Chartered Accountants</em></div>
+    <span class="since">Established <strong>1999</strong> · Doha, Qatar</span>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="kicker">Accounting · Audit · ICV Certification · Doha</div>
+      <h1>25 Years of Trust.<br>800 Clients. Your Turn.</h1>
+      <p class="sub">A.Al Khalifa & Partners has been Doha's audit and advisory firm since 1999. 35 consultants. 300+ ICV certifications. The firm where Qatar's established businesses send their books.</p>
+      <div class="trust-row">
+        <div class="trust-item"><strong>ICV Certified</strong></div>
+        <div class="trust-item"><strong>Est. 1999</strong></div>
+        <div class="trust-item"><strong>35 Consultants</strong></div>
+        <div class="trust-item"><strong>13 Sectors</strong></div>
+      </div>
+      <a class="cta" href="https://wa.me/97444329002">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.557 4.119 1.532 5.845L.044 23.956l6.278-1.461A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.87 0-3.628-.48-5.162-1.329l-.371-.213-3.725.867.901-3.617-.234-.385A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        WhatsApp Us Now
+      </a>
+      <span class="cta-note">Or call +974 4432 9002 · Sun–Thu 8am–5pm</span>
+    </div>
+    <div class="hero-visual">
+      <div class="metrics">
+        <div class="metric"><span class="num">25+</span><span class="label">Years</span></div>
+        <div class="metric"><span class="num">800+</span><span class="label">Clients</span></div>
+        <div class="metric"><span class="num">35+</span><span class="label">Consultants</span></div>
+        <div class="metric"><span class="num">300+</span><span class="label">ICV Certs</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>Full financial coverage, under one roof</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Audit & Financial Services</h3>
+        <p>Independent audit and assurance for companies of all sizes — statutory, internal, and agreed-upon-procedures engagements accepted by Qatar regulators.</p>
+      </div>
+      <div class="card">
+        <h3>ICV Certification</h3>
+        <p>In-Country Value certification for companies bidding on government and energy contracts. 300+ certifications issued — one of Doha's most experienced ICV teams.</p>
+      </div>
+      <div class="card">
+        <h3>Tax & Advisory</h3>
+        <p>Corporate tax planning, VAT compliance, business restructuring, and liquidation services — strategic advice built for Qatar's regulatory environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" id="contact">
+    <div>
+      <h2>Ready to work with Doha's most established audit firm?</h2>
+      <div class="trust">A.Al Khalifa & Partners · C-Ring Road, Doha · Est. 1999 · info@alkhalifaca.com</div>
+    </div>
+    <a class="cta" href="https://wa.me/97444329002">WhatsApp Us</a>
+  </section>
+
+  <footer>Concept preview prepared by Elena Agency for A.Al Khalifa & Partners — not a live site.</footer>
+</div>
+</body>
+</html>
