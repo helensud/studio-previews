@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>JBA & Partners — concept preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1428;
+  --surface:#172040;
+  --ink:#dde4ef;
+  --muted:#7b8eaa;
+  --accent:#c9a227;
+  --accent-soft:color-mix(in srgb,#c9a227 18%,transparent);
+  --accent-ink:#0e1428;
+  --display:'Cormorant Garamond',Georgia,serif;
+  --body:'Inter',system-ui,sans-serif;
+}
+*{margin:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.logo{font-family:var(--display);font-size:1.35rem;letter-spacing:.04em;font-weight:600}
+.logo em{color:var(--accent);font-style:normal}
+.badge-strip{display:flex;gap:10px}
+.badge{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:6px;border:1px solid var(--accent-soft);color:var(--accent)}
+
+/* Hero */
+.hero{padding:9vh 0 10vh;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.credential-tag{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:8px;padding:8px 14px;margin-bottom:20px}
+.credential-tag svg{width:14px;height:14px;fill:var(--accent)}
+.credential-tag span{font-size:.75rem;font-weight:600;color:var(--accent);letter-spacing:.05em}
+h1{font-family:var(--display);font-size:clamp(2.2rem,4.8vw,3.6rem);line-height:1.08;font-weight:700;margin-bottom:18px}
+.sub{color:var(--muted);font-size:1rem;max-width:46ch;margin-bottom:30px;line-height:1.7}
+.cta{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:600;padding:15px 28px;border-radius:9px;text-decoration:none;font-size:.95rem}
+.cta-note{display:block;margin-top:10px;color:var(--muted);font-size:.83rem}
+.hero-visual{aspect-ratio:1;border-radius:20px;
+  background:radial-gradient(ellipse 90% 70% at 30% 80%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 60%),
+  linear-gradient(135deg,var(--surface),var(--bg));
+  border:1px solid color-mix(in srgb,var(--ink) 7%,transparent);
+  display:grid;place-items:center;padding:36px}
+.cred-list{list-style:none;display:flex;flex-direction:column;gap:16px;width:100%}
+.cred-list li{display:flex;align-items:center;gap:12px;font-size:.88rem}
+.cred-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.cred-list strong{color:var(--ink);display:block;font-weight:600}
+.cred-list span{color:var(--muted);font-size:.8rem}
+
+/* Services */
+.services{padding:60px 0 72px;border-top:1px solid color-mix(in srgb,var(--ink) 7%,transparent)}
+h2{font-family:var(--display);font-size:1.9rem;font-weight:600;margin-bottom:32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border-radius:14px;padding:28px 24px;border-left:3px solid var(--accent)}
+.card h3{font-size:.98rem;font-weight:600;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.88rem;line-height:1.55}
+
+/* Strip */
+.strip{margin:0 0 72px;border-radius:18px;padding:44px 40px;display:flex;justify-content:space-between;align-items:center;gap:28px;background:var(--surface);border:1px solid color-mix(in srgb,var(--accent) 15%,transparent)}
+.strip h2{font-family:var(--display);font-size:1.6rem;font-weight:600;max-width:26ch;margin-bottom:8px}
+.strip .trust{color:var(--muted);font-size:.87rem}
+
+footer{padding:18px 0 36px;color:color-mix(in srgb,var(--muted) 55%,transparent);font-size:.76rem}
+
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr;padding:5vh 0}
+  .hero-visual{aspect-ratio:3/2;order:-1}
+  .grid{grid-template-columns:1fr}
+  .strip{flex-direction:column;align-items:flex-start}
+  .badge-strip{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">JBA <em>&</em> Partners</div>
+    <div class="badge-strip">
+      <span class="badge">QP ICV Approved</span>
+      <span class="badge">QFMA Licensed</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="credential-tag">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <span>Qatar Petroleum Approved ICV Certifier</span>
+      </div>
+      <h1>The Credential That Wins Qatar Petroleum Contracts</h1>
+      <p class="sub">JBA & Partners is one of a handful of firms approved by Qatar Petroleum to issue ICV certifications — the requirement for major government and energy contracts. Est. 2005. QFMA licensed. JPA International member.</p>
+      <a class="cta" href="https://wa.me/97466693950">Book a Meeting on WhatsApp</a>
+      <span class="cta-note">Or call +974 4467 5246 · Sun–Thu 8am–5pm</span>
+    </div>
+    <div class="hero-visual">
+      <ul class="cred-list">
+        <li><span class="cred-dot"></span><div><strong>ICV Certifier</strong><span>Approved by Qatar Petroleum</span></div></li>
+        <li><span class="cred-dot"></span><div><strong>QFMA Registered</strong><span>External auditor approved</span></div></li>
+        <li><span class="cred-dot"></span><div><strong>JPA International</strong><span>Global network, local expertise</span></div></li>
+        <li><span class="cred-dot"></span><div><strong>Established 2005</strong><span>20 years in Qatar</span></div></li>
+        <li><span class="cred-dot"></span><div><strong>Ministry Licensed</strong><span>Qatar Ministry of Commerce</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>Where companies come to us first</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>ICV Certification</h3>
+        <p>Qatar Petroleum-approved certification for companies bidding on government and energy contracts. Fast turnaround, full compliance.</p>
+      </div>
+      <div class="card">
+        <h3>Audit & Assurance</h3>
+        <p>Independent audits accepted by Qatar's regulatory bodies. Statutory, internal, and agreed-upon-procedures engagements.</p>
+      </div>
+      <div class="card">
+        <h3>Tax & VAT</h3>
+        <p>Corporate income tax, VAT registration and filing, transfer pricing, and Dhareeba platform compliance — handled end to end.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" id="contact">
+    <div>
+      <h2>ICV deadline approaching? Let's talk this week.</h2>
+      <div class="trust">JBA & Partners · C-Ring Road, Doha · Est. 2005 · QP Approved</div>
+    </div>
+    <a class="cta" href="https://wa.me/97466693950">Message Us Now</a>
+  </section>
+
+  <footer>Concept preview prepared by Elena Agency for JBA & Partners — not a live site.</footer>
+</div>
+</body>
+</html>
