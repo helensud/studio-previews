@@ -52,6 +52,8 @@ h1 span{color:var(--accent)}
 h2{font-family:var(--display);font-size:1.9rem;font-weight:800;margin-bottom:32px;text-align:center;letter-spacing:-.02em}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:var(--surface);border-radius:14px;padding:28px 24px;border:1px solid color-mix(in srgb,var(--ink) 6%,transparent);text-align:left}
+.card-icon{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);margin-bottom:16px;display:flex;align-items:center;justify-content:center}
+.card-icon svg{width:22px;height:22px;fill:var(--accent)}
 .card-tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:6px;margin-bottom:14px}
 .card h3{font-family:var(--display);font-size:.98rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
 .card p{color:var(--muted);font-size:.88rem;line-height:1.55}
@@ -103,16 +105,25 @@ footer{padding:18px 0 36px;color:color-mix(in srgb,var(--muted) 55%,transparent)
     <h2>One platform, two sides of the market</h2>
     <div class="grid">
       <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
         <span class="card-tag">For Employers</span>
         <h3>Post & Find in Days</h3>
         <p>Reach 3,200+ screened candidates in Qatar. Accounting, engineering, hospitality, IT — every sector. No recruiter fees.</p>
       </div>
       <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        </div>
         <span class="card-tag">For Job Seekers</span>
         <h3>Qatar-Specific Roles</h3>
         <p>Jobs posted by verified Qatar employers with real salaries. Search by sector, apply in minutes, get callbacks fast.</p>
       </div>
       <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
         <span class="card-tag">For Agencies</span>
         <h3>Agency Toolkit</h3>
         <p>Dedicated recruiter accounts to post on behalf of clients, manage multiple pipelines, and track placements in one place.</p>
