@@ -41,21 +41,21 @@ h1{font-family:var(--display);font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.1
 .cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);font-weight:600;padding:15px 28px;border-radius:9px;text-decoration:none;font-size:.93rem}
 .cta svg{width:17px;height:17px;fill:currentColor}
 .cta-note{display:block;margin-top:10px;color:var(--muted);font-size:.83rem}
-.hero-visual{aspect-ratio:1;border-radius:20px;
-  background:radial-gradient(ellipse 100% 60% at 50% 100%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 60%),
-  linear-gradient(160deg,var(--surface2),var(--surface));
-  border:1px solid color-mix(in srgb,var(--ink) 6%,transparent);
-  padding:36px;display:flex;align-items:center;justify-content:center}
-.metrics{display:grid;grid-template-columns:1fr 1fr;gap:2px;width:100%}
-.metric{background:var(--bg);padding:20px 18px;border-radius:6px}
-.metric .num{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--accent);display:block;line-height:1;margin-bottom:4px}
-.metric .label{font-size:.73rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.hero-visual{aspect-ratio:1;border-radius:20px;overflow:hidden;background:linear-gradient(150deg,var(--surface2),var(--surface));border:1px solid color-mix(in srgb,var(--ink) 6%,transparent)}
+
+/* Metrics row */
+.metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 64px}
+.metric-card{background:var(--surface);border-radius:14px;padding:22px 20px;border:1px solid color-mix(in srgb,var(--accent) 12%,transparent);text-align:center}
+.metric-card .num{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--accent);display:block;line-height:1;margin-bottom:4px}
+.metric-card .label{font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 
 /* Services */
-.services{padding:60px 0 72px;border-top:1px solid color-mix(in srgb,var(--ink) 7%,transparent)}
+.services{padding:0 0 72px;border-top:1px solid color-mix(in srgb,var(--ink) 7%,transparent);padding-top:60px}
 h2{font-family:var(--display);font-size:1.75rem;font-weight:700;margin-bottom:32px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:var(--surface);border-radius:14px;padding:28px 24px;border:1px solid color-mix(in srgb,var(--ink) 6%,transparent)}
+.card-icon{width:42px;height:42px;border-radius:11px;background:var(--accent-soft);margin-bottom:16px;display:flex;align-items:center;justify-content:center}
+.card-icon svg{width:20px;height:20px;fill:var(--accent)}
 .card h3{font-size:.97rem;font-weight:600;margin-bottom:8px}
 .card p{color:var(--muted);font-size:.88rem;line-height:1.55}
 
@@ -70,6 +70,7 @@ footer{padding:18px 0 36px;color:color-mix(in srgb,var(--muted) 55%,transparent)
 @media(max-width:760px){
   .hero{grid-template-columns:1fr;padding:5vh 0}
   .hero-visual{aspect-ratio:3/2;order:-1}
+  .metrics-row{grid-template-columns:repeat(2,1fr)}
   .grid{grid-template-columns:1fr}
   .strip{flex-direction:column;align-items:flex-start}
   .trust-row{gap:14px}
@@ -100,28 +101,109 @@ footer{padding:18px 0 36px;color:color-mix(in srgb,var(--muted) 55%,transparent)
       </a>
       <span class="cta-note">Or call +974 4432 9002 · Sun–Thu 8am–5pm</span>
     </div>
+    <!-- Professional office illustration -->
     <div class="hero-visual">
-      <div class="metrics">
-        <div class="metric"><span class="num">25+</span><span class="label">Years</span></div>
-        <div class="metric"><span class="num">800+</span><span class="label">Clients</span></div>
-        <div class="metric"><span class="num">35+</span><span class="label">Consultants</span></div>
-        <div class="metric"><span class="num">300+</span><span class="label">ICV Certs</span></div>
-      </div>
+      <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <defs>
+          <radialGradient id="kg1" cx="68%" cy="28%" r="58%">
+            <stop offset="0%" stop-color="#c9952a" stop-opacity=".26"/>
+            <stop offset="100%" stop-color="#c9952a" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="kg2" cx="20%" cy="75%" r="42%">
+            <stop offset="0%" stop-color="#1d4a7a" stop-opacity=".18"/>
+            <stop offset="100%" stop-color="#1d4a7a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="340" height="340" fill="#161d27"/>
+        <rect width="340" height="340" fill="url(#kg1)"/>
+        <rect width="340" height="340" fill="url(#kg2)"/>
+        <!-- Desk surface -->
+        <rect x="20" y="240" width="300" height="9" rx="4.5" fill="#1d2633"/>
+        <rect x="38" y="249" width="5" height="56" rx="2.5" fill="#131a23"/>
+        <rect x="297" y="249" width="5" height="56" rx="2.5" fill="#131a23"/>
+        <!-- Laptop base -->
+        <rect x="90" y="232" width="160" height="9" rx="4" fill="#1d2633"/>
+        <!-- Laptop screen -->
+        <rect x="96" y="134" width="148" height="99" rx="8" fill="#0d1117" stroke="#c9952a" stroke-width="1.2" stroke-opacity=".55"/>
+        <!-- Screen: bar chart -->
+        <rect x="112" y="206" width="12" height="20" rx="2.5" fill="#c9952a" opacity=".65"/>
+        <rect x="130" y="196" width="12" height="30" rx="2.5" fill="#c9952a" opacity=".8"/>
+        <rect x="148" y="190" width="12" height="36" rx="2.5" fill="#c9952a"/>
+        <rect x="166" y="198" width="12" height="28" rx="2.5" fill="#c9952a" opacity=".75"/>
+        <rect x="184" y="186" width="12" height="40" rx="2.5" fill="#c9952a" opacity=".9"/>
+        <rect x="202" y="192" width="12" height="34" rx="2.5" fill="#c9952a" opacity=".7"/>
+        <!-- Trend line -->
+        <polyline points="118,211 136,200 154,193 172,202 190,189 208,195" fill="none" stroke="#c9952a" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4,3" opacity=".45"/>
+        <!-- Screen: header text lines -->
+        <rect x="110" y="145" width="128" height="7" rx="3.5" fill="#c9952a" opacity=".45"/>
+        <rect x="110" y="158" width="85" height="4.5" rx="2.25" fill="#7a8fa0" opacity=".4"/>
+        <rect x="110" y="168" width="104" height="4.5" rx="2.25" fill="#7a8fa0" opacity=".32"/>
+        <!-- Documents left stack -->
+        <rect x="26" y="167" width="60" height="72" rx="7" fill="#1d2633" stroke="#c9952a" stroke-width=".8" stroke-opacity=".28"/>
+        <rect x="36" y="180" width="40" height="5" rx="2.5" fill="#c9952a" opacity=".55"/>
+        <rect x="36" y="191" width="30" height="4" rx="2" fill="#7a8fa0" opacity=".42"/>
+        <rect x="36" y="201" width="36" height="4" rx="2" fill="#7a8fa0" opacity=".38"/>
+        <rect x="36" y="211" width="24" height="4" rx="2" fill="#7a8fa0" opacity=".32"/>
+        <!-- Stamp on doc -->
+        <circle cx="56" cy="224" r="9" fill="none" stroke="#c9952a" stroke-width="1.3" stroke-opacity=".65" stroke-dasharray="3,2"/>
+        <text x="49" y="228" font-family="sans-serif" font-size="8" font-weight="bold" fill="#c9952a" opacity=".7">✓ OK</text>
+        <!-- Documents right stack -->
+        <rect x="254" y="167" width="60" height="72" rx="7" fill="#1d2633" stroke="#c9952a" stroke-width=".8" stroke-opacity=".28"/>
+        <rect x="264" y="180" width="40" height="5" rx="2.5" fill="#c9952a" opacity=".45"/>
+        <rect x="264" y="191" width="28" height="4" rx="2" fill="#7a8fa0" opacity=".38"/>
+        <rect x="264" y="201" width="34" height="4" rx="2" fill="#7a8fa0" opacity=".33"/>
+        <rect x="264" y="211" width="22" height="4" rx="2" fill="#7a8fa0" opacity=".28"/>
+        <!-- Person left silhouette -->
+        <circle cx="64" cy="112" r="24" fill="#1d2633"/>
+        <circle cx="64" cy="105" r="12" fill="#26354a"/>
+        <rect x="42" y="133" width="44" height="38" rx="12" fill="#1d2633"/>
+        <!-- Person right silhouette -->
+        <circle cx="276" cy="112" r="24" fill="#1d2633"/>
+        <circle cx="276" cy="105" r="12" fill="#26354a"/>
+        <rect x="254" y="133" width="44" height="38" rx="12" fill="#1d2633"/>
+        <!-- Floating mini badge top right -->
+        <rect x="228" y="36" width="92" height="56" rx="10" fill="#1d2633" stroke="#c9952a" stroke-width=".8" stroke-opacity=".22"/>
+        <rect x="242" y="48" width="64" height="5" rx="2.5" fill="#c9952a" opacity=".38"/>
+        <text x="242" y="80" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#c9952a">25 yrs</text>
+        <!-- Small dots -->
+        <circle cx="308" cy="45" r="4" fill="#c9952a" opacity=".3"/>
+        <circle cx="320" cy="56" r="2.5" fill="#c9952a" opacity=".22"/>
+        <circle cx="26" cy="72" r="3" fill="#c9952a" opacity=".18"/>
+        <!-- Line connector between people -->
+        <line x1="88" y1="130" x2="252" y2="130" stroke="#1d2633" stroke-width="1.5" stroke-dasharray="6,4" opacity=".6"/>
+      </svg>
     </div>
   </section>
+
+  <!-- Metrics row — moved from hero to standalone section -->
+  <div class="metrics-row">
+    <div class="metric-card"><span class="num">25+</span><span class="label">Years in Doha</span></div>
+    <div class="metric-card"><span class="num">800+</span><span class="label">Active Clients</span></div>
+    <div class="metric-card"><span class="num">35+</span><span class="label">Consultants</span></div>
+    <div class="metric-card"><span class="num">300+</span><span class="label">ICV Certifications</span></div>
+  </div>
 
   <section class="services">
     <h2>Full financial coverage, under one roof</h2>
     <div class="grid">
       <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        </div>
         <h3>Audit & Financial Services</h3>
         <p>Independent audit and assurance for companies of all sizes — statutory, internal, and agreed-upon-procedures engagements accepted by Qatar regulators.</p>
       </div>
       <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
         <h3>ICV Certification</h3>
         <p>In-Country Value certification for companies bidding on government and energy contracts. 300+ certifications issued — one of Doha's most experienced ICV teams.</p>
       </div>
       <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
         <h3>Tax & Advisory</h3>
         <p>Corporate tax planning, VAT compliance, business restructuring, and liquidation services — strategic advice built for Qatar's regulatory environment.</p>
       </div>
@@ -133,7 +215,10 @@ footer{padding:18px 0 36px;color:color-mix(in srgb,var(--muted) 55%,transparent)
       <h2>Ready to work with Doha's most established audit firm?</h2>
       <div class="trust">A.Al Khalifa & Partners · C-Ring Road, Doha · Est. 1999 · info@alkhalifaca.com</div>
     </div>
-    <a class="cta" href="https://wa.me/97444329002">WhatsApp Us</a>
+    <a class="cta" href="https://wa.me/97444329002">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.557 4.119 1.532 5.845L.044 23.956l6.278-1.461A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.87 0-3.628-.48-5.162-1.329l-.371-.213-3.725.867.901-3.617-.234-.385A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      WhatsApp Us
+    </a>
   </section>
 
   <footer>Concept preview prepared by Elena Agency for A.Al Khalifa & Partners — not a live site.</footer>
